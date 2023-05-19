@@ -1,0 +1,162 @@
+/* globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --colors: {
+    primary: #1db954;
+    secondary: #191414;
+    foreground: #ffffff;
+    background: #191414;
+  };
+}
+
+body {
+  color: var(--colors.foreground);
+  background-color: var(--colors.background);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.containerhome {
+  background-image: url('../app/img/wallpaperflare.com_wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.containeralong {
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  background-color: var(--colors.primary);
+  color: var(--colors.foreground);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #1ed760;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #1ed760;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.exercicios-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.exercicio-item {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.exercicio-name {
+  font-size: 38px;
+}
+
+@media (max-width: 768px) {
+  .exercicio-name {
+    font-size: 16px;
+  }
+}
+
+/* Zoom e animações */
+
+.link-zoom {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.link-zoom::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: var(--colors.primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.link-zoom:hover::before {
+  opacity: 1;
+}
+
+.link-zoom:hover::after {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.link-zoom::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: var(--colors.secondary);
+  opacity: 0;
+  transition: transform 0.3s ease;
+}
+.custom-h3 {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  background-color: #1db954;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
