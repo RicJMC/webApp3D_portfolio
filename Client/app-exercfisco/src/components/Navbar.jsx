@@ -26,7 +26,7 @@ export const Navbar = () => {
     <header>
       <nav className={`navbar ${isOpen ? "open" : ""}`}>
         <div className="navbar-container">
-          <div className="logo">LOGO</div>
+          <img src="../public/holiday-g9f5529b5d_640.PNG" height="40" alt="logo" className="logo"/>
 
           <div className="menu-icon" onClick={toggleMenu}>
             <span></span>
@@ -49,7 +49,8 @@ export const Navbar = () => {
                   <Link to="/exercicio">Exercises</Link>
                 </li>
                 <li>
-                  <Link to="/other-applications">Other Applications</Link>
+                  <Link to="/keepApp">Keep App</Link></li>
+                <li><Link to="/other-applications">Other Applications</Link>
                 </li>
               </ul>
             </div>

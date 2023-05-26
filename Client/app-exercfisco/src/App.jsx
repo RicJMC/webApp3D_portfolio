@@ -22,6 +22,7 @@ function App() {
         <Route path="/exercicio" element={<Exercicio />} />
         <Route path="/exercicio/alongamento" element={<Alongamento />} />
         <Route path="/exercicio/fortalecimento" element={<Fortalecimento />} />
+        
       </Routes>
     </Router>
   )
