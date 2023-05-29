@@ -14,6 +14,9 @@ export const Navbar = () => {
       setIsOpen(false);
     }
   };
+  const handleMenuItemClick = () => {
+    setIsOpen(false); // Fecha o menu hamburguer
+  };
 
   useEffect(() => {
     document.addEventListener("mousedown", handleOutsideClick);
@@ -25,42 +28,63 @@ export const Navbar = () => {
   return (
     <header>
       <nav className={`navbar ${isOpen ? "open" : ""}`}>
-        <div className="navbar-container">
-          <img src="../public/holiday-g9f5529b5d_640.PNG" height="40" alt="logo" className="logo"/>
-
-          <div className="menu-icon" onClick={toggleMenu}>
+      <div className="menu-icon" onClick={toggleMenu}>
             <span></span>
             <span></span>
             <span></span>
           </div>
+        <div className="navbar-container">
+          <div className="logo">
+            <Link to="/" className="logo"> <img src="../public/holiday-g9f5529b5d_640.PNG" height="40" alt="logo" className="logo" />
+            </Link>
+            
+          </div>
+          <div className="navbar-options">
+            <Link to="/about" className="navbar-option">About</Link>
+            <Link to="/services" className="navbar-option">Services</Link>
+            <Link to="/login" className="navbar-option">Login</Link>
+          </div>
+
           {isOpen && (
             <div className="dropdown-menu" ref={dropdownRef}>
               <ul>
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link to="/about" onClick={handleMenuItemClick}>
+                    About
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/Projectos">Projectos</Link>
+                  <Link to="/Projectos" onClick={handleMenuItemClick}>
+                    Projectos
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/more-info">More Info</Link>
+                  <Link to="/more-info" onClick={handleMenuItemClick}>
+                    More Info
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/exercicio">Exercises</Link>
+                  <Link to="/exercicio" onClick={handleMenuItemClick}>
+                    Exercises
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/keepApp">Keep App</Link></li>
-                <li><Link to="/other-applications">Other Applications</Link>
+                  <Link to="/keepApp" onClick={handleMenuItemClick}>
+                    Keep App
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/other-applications"
+                    onClick={handleMenuItemClick}
+                  >
+                    Other Applications
+                  </Link>
                 </li>
               </ul>
             </div>
           )}
         </div>
-        <div className="navbar-options">
-            <Link to="/about" className="navbar-option">About</Link>
-            <Link to="/services" className="navbar-option">Services</Link>
-            <Link to="/login" className="navbar-option">Login</Link>
-          </div>
       </nav>
     </header>
   );

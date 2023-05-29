@@ -8,7 +8,9 @@ import { About } from './pages/about';
 import { Exercicio } from './pages/exerc/exercicio'
 import { Alongamento } from './pages/exerc/alongamento';
 import { Fortalecimento } from './pages/exerc/fortalecimento';
-
+import { Keepappprincipal } from './pages/keepapp/KeepAppPrincipal';
+import { Footer } from './components/Footer'
+import { Loginpage } from './pages/login/loginpage';
 
 function App() {
   return (
@@ -22,8 +24,10 @@ function App() {
         <Route path="/exercicio" element={<Exercicio />} />
         <Route path="/exercicio/alongamento" element={<Alongamento />} />
         <Route path="/exercicio/fortalecimento" element={<Fortalecimento />} />
-        
+        <Route path="/keepapp" element={<Keepappprincipal />} />
+        <Route path="/login" element={<Loginpage />} />
       </Routes>
+      <Footer></Footer>
     </Router>
   )
 }
