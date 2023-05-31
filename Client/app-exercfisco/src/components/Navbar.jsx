@@ -40,7 +40,7 @@ export const Navbar = () => {
             
           </div>
           <div className="navbar-options">
-            <Link to="/about" className="navbar-option">About</Link>
+            <Link to="/about2" className="navbar-option">About</Link>
             <Link to="/services" className="navbar-option">Services</Link>
             <Link to="/login" className="navbar-option">Login</Link>
           </div>

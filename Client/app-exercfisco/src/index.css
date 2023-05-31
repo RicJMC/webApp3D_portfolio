@@ -154,7 +154,7 @@ body {
 /* Footer */
 
 footer {
-  position: absolute;
+  position: fixed;
   text-align: center;
   bottom: 0;
   width: 100%;
@@ -237,4 +237,107 @@ form button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+.container-about-two {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar-about-two {
+  
+  width: 30%;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+.photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.sidebar-info {
+  margin-top: 20px;
+}
+
+.sidebar-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.sidebar-title {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.sidebar-contact-info {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.sidebar-contact-info a {
+  text-decoration: none;
+  color: #0645ad;
+}
+
+.content-about-two {
+  width: 70%;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.section-about-two {
+  margin-bottom: 30px;
+}
+
+.section-title-about-two {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.section-content-about-two {
+  margin-top: 10px;
+}
+
+.education-description-about-two,
+.language-description-about-two {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.skills-list-about-two,
+.project-list-about-two,
+.interests-list-about-two {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 14px;
+}
+
+.skills-list-about-two li,
+.project-list-about-two li,
+.interests-list-about-two li {
+  margin-bottom: 5px;
+}
+
+/* Responsive CSS for mobile devices */
+
+@media (max-width: 768px) {
+  .container-about-two {
+    flex-direction: column;
+  }
+
+  .sidebar-about-two,
+  .content-about-two {
+    width: 100%;
+
+  }
+  .sidebar-info {
+    text-align: center;
+  }
+  .photo {
+    display: block;
+    margin: 0 auto;
+  }
+  
 }
