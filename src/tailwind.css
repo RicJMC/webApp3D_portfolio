@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-gray-800 font-sans;
+}
+
+/* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #eee;
+  padding: 0 16px;
+}
+
+/* Navbar */
+.navbar {
+  @apply bg-white shadow-lg fixed w-full z-10 top-0 left-0;
+  height: 60px; /* Ajuste a altura conforme necessário */
+}
+
+.navbar-placeholder {
+  height: 60px; /* Deve ser a mesma altura da navbar */
+}
+
+.logo {
+  @apply font-bold text-lg ml-2;
+}
+
+.menu-icon {
+  @apply flex flex-col justify-between w-8 h-5 cursor-pointer;
+}
+
+.menu-icon span {
+  @apply block w-full h-1 bg-black transition-all ease-in-out duration-300;
+}
+
+.menu-icon.open span:nth-child(2) {
+  @apply opacity-0;
+}
+
+.menu-icon.open span:nth-child(1) {
+  @apply transform translate-y-2 rotate-45;
+}
+
+.menu-icon.open span:nth-child(3) {
+  @apply transform -translate-y-2 -rotate-45;
+}
+
+.dropdown-menu {
+  @apply absolute top-full left-0 bg-white p-2 w-48 rounded-md shadow-md z-10;
+}
+
+.dropdown-menu ul {
+  @apply list-none p-0 m-0;
+}
+
+.dropdown-menu li {
+  @apply mb-2;
+}
+
+.dropdown-menu li:last-child {
+  @apply mb-0;
+}
+
+.dropdown-menu a {
+  @apply block text-black text-sm leading-6 p-2 hover:bg-gray-200 transition-colors ease-in-out duration-300;
+}
+
+.navbar-option {
+  @apply no-underline text-black text-base p-2 mr-2 hover:bg-gray-200 transition-colors ease-in-out duration-300;
+}
+
+.navbar-container {
+  @apply flex items-center;
+}
+
+/* About */
+.container {
+  @apply max-w-2xl mx-auto p-5;
+}
+
+.skills {
+  @apply font-bold mb-2;
+}
+
+.project-list {
+  @apply list-disc ml-5;
+}
+
+.project-list li {
+  @apply mb-1;
+}
+
+.highlights {
+  @apply mt-5;
+}
+
+.highlight-item {
+  @apply mb-2;
+}
+
+/* Footer */
+footer {
+  @apply fixed text-center bottom-0 w-full h-10;
+}
+
+footer p {
+  @apply text-gray-400;
+}
+
+/* Note */
+.note {
+  @apply bg-white rounded-lg shadow-md p-4 w-60 mx-4 my-4 float-left;
+}
+
+.note h1 {
+  @apply text-base mb-2;
+}
+
+.note p {
+  @apply text-base mb-2 whitespace-pre-wrap break-words;
+}
+
+.note button {
+  @apply relative float-right mr-2 text-yellow-400 border-none w-9 h-9 cursor-pointer;
+}
+
+/* Form */
+form {
+  @apply relative w-96 mx-auto my-8 bg-white p-5 rounded-lg shadow-md;
+}
+
+form input,
+form textarea {
+  @apply w-full border-none p-1 text-lg outline-none font-sans resize-none;
+}
+
+form button {
+  @apply absolute right-4 bottom-4 bg-yellow-400 text-white rounded-full w-9 h-9 shadow-md cursor-pointer;
+}
+
+/* About Two */
+.container-about-two {
+  @apply flex flex-row;
+}
+
+.sidebar-about-two {
+  @apply w-1/3 p-5 bg-gray-200;
+}
+
+.photo {
+  @apply w-full h-auto rounded-full;
+}
+
+.sidebar-info {
+  @apply mt-5;
+}
+
+.sidebar-name {
+  @apply text-2xl font-bold;
+}
+
+.sidebar-title {
+  @apply text-lg mt-2 font-bold;
+}
+
+.sidebar-contact-info {
+  @apply mt-5 text-sm;
+}
+
+.sidebar-contact-info a {
+  @apply no-underline text-blue-700;
+}
+
+.content-about-two {
+  @apply w-2/3 p-5 bg-white;
+}
+
+.section-about-two {
+  @apply mb-7;
+}
+
+.section-title-about-two {
+  @apply text-xl font-bold;
+}
+
+.section-content-about-two {
+  @apply mt-2;
+}
+
+.education-description-about-two,
+.language-description-about-two {
+  @apply text-sm leading-6;
+}
+
+.skills-list-about-two,
+.project-list-about-two,
+.interests-list-about-two {
+  @apply list-none p-0;
+}
+
+.skills-list-about-two li,
+.project-list-about-two li,
+.interests-list-about-two li {
+  @apply mb-1;
+}
+
+/* Responsive CSS for mobile devices */
+@media (max-width: 768px) {
+  .container-about-two {
+    @apply flex-col;
+  }
+
+  .sidebar-about-two,
+  .content-about-two {
+    @apply w-full;
+  }
+
+  .sidebar-info {
+    @apply text-center;
+  }
+
+  .photo {
+    @apply block mx-auto;
+  }
+}
